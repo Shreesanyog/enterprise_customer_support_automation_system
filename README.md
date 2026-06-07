@@ -65,14 +65,44 @@ This project emphasizes robust operational practices to ensure high availability
 
 ---
 
+
 ## 💻 Local Setup & Installation
 
 ### Prerequisites
+Before you begin, ensure you have the following installed on your local machine:
 * Docker Desktop installed and running.
-* An active API Key for your LLM provider.
+* Git
+* An active API Key for your chosen LLM provider (e.g., OpenAI, Google Gemini, Anthropic).
 
-### Quick Start
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Shreesanyog/enterprise_customer_support_automation_system.git
-   cd enterprise-support-automation_system
+### Step-by-Step Guide
+
+**1. Clone the repository**
+Download the project files to your local machine using Git:
+```bash
+git clone https://github.com/Shreesanyog/enterprise_customer_support_automation_system.git
+cd enterprise_customer_support_automation_system
+```
+
+**2. Configure Environment Variables**
+The multi-agent system requires API keys to function correctly. Create a `.env` file in the root directory of the project and add your credentials:
+```env
+LLM_API_KEY=your_api_key_here
+```
+
+**3. Deploy the Stack (Docker)**
+Build and start the containerized application. Docker Compose will automatically set up the FastAPI backend, the Streamlit frontend, and network them together:
+```bash
+docker-compose up --build
+```
+
+**4. Access the Services**
+Once the terminal indicates the containers are running successfully, open your web browser and navigate to the following endpoints:
+* **Chat Interface (Frontend):** http://localhost:8501
+* **API Documentation (Swagger UI):** http://localhost:8000/docs
+
+**5. Stopping the System**
+To gracefully stop the application and spin down the containers, use the following command in your terminal:
+```bash
+docker-compose down
+```
+
