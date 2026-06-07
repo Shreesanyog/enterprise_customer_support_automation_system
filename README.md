@@ -74,5 +74,5 @@ This project emphasizes robust operational practices to ensure high availability
 ### Quick Start
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/Shreesanyog/enterprise-support-automation_system.git](https://github.com/yourusername/enterprise-support-automation_system.git)
+   git clone https://github.com/Shreesanyog/enterprise_customer_support_automation_system.git
    cd enterprise-support-automation_system
