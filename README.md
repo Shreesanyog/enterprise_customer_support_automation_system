@@ -20,11 +20,17 @@ An autonomous, production-ready customer support resolution engine driven by a m
 
 ### Customer Chat Portal (Frontend)
 *Streamlit-based interactive UI for seamless customer query submission.*
-> **[Insert your frontend image here: `![Frontend Interface](docs/frontend.png)`]**
+<img width="616" height="334" alt="crewai" src="https://github.com/user-attachments/assets/55abcb3b-217c-40c8-b186-c3cffc31076a" />
+
 
 ### Agent Orchestration & Logs (Backend)
 *FastAPI server handling asynchronous agent routing and pipeline execution.*
-> **[Insert your backend image here: `![Backend Logs](docs/backend.png)`]**
+<img width="2072" height="978" alt="image" src="https://github.com/user-attachments/assets/70a8e853-abf6-47e3-bc80-14ff81518bca" />
+
+<img width="2031" height="1014" alt="image" src="https://github.com/user-attachments/assets/38a48ce3-9014-4014-9d5c-f49240f3ea33" />
+
+<img width="1288" height="664" alt="image" src="https://github.com/user-attachments/assets/c532bcc4-a6ec-4e02-a41c-7cd8dc634019" />
+
 
 ---
 
@@ -54,6 +60,9 @@ This project emphasizes robust operational practices to ensure high availability
 * **Containerization:** The frontend and backend are decoupled and containerized using Docker, ensuring environmental consistency across dev, staging, and production.
 * **Automated Rollbacks:** The CI/CD pipeline includes health-check validations post-deployment. If the newly deployed container fails to return a healthy status code, the pipeline automatically reverts to the previous stable image, preventing customer-facing downtime.
 
+<img width="926" height="420" alt="image" src="https://github.com/user-attachments/assets/835ce01e-61cd-497b-916f-2e8da9099432" />
+
+
 ---
 
 ## 💻 Local Setup & Installation
@@ -65,5 +74,5 @@ This project emphasizes robust operational practices to ensure high availability
 ### Quick Start
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/yourusername/enterprise-support-agent.git](https://github.com/yourusername/enterprise-support-agent.git)
-   cd enterprise-support-agent
+   git clone [https://github.com/Shreesanyog/enterprise-support-automation_system.git](https://github.com/yourusername/enterprise-support-automation_system.git)
+   cd enterprise-support-automation_system
