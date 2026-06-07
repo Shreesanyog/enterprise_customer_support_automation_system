@@ -1,76 +1,69 @@
-Enterprise Customer Support Automation System
-An intelligent, autonomous customer support resolution system powered by a multi-agent Retrieval-Augmented Generation (RAG) pipeline. This project focuses on delivering highly accurate, empathetic, and automated ticket resolution while adhering to production-grade DevOps practices.
+# 🏢 Enterprise Customer Support Automation System
 
-🚀 Key Features
-Agentic Orchestration: Powered by CrewAI, a team of specialized AI agents handles the entire lifecycle of a customer query.
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=FastAPI&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=Docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF)
 
-Hybrid RAG Pipeline: Utilizes a FAISS-based knowledge base for high-precision, context-aware information retrieval.
+An autonomous, production-ready customer support resolution engine driven by a multi-agent AI architecture. This system reduces human workload by intelligently retrieving historical solutions, analyzing user sentiment, and automatically drafting quality-assured, empathetic responses.
 
-Multi-Step Quality Assurance: Every generated response is autonomously critiqued and refined before delivery.
+---
 
-Modern API & UI: Scalable backend powered by FastAPI, paired with an intuitive Streamlit chat interface.
+## 🎯 Business Impact & Key Features
+* **Autonomous Resolution:** Fully automates Tier-1 support workflows using a specialized AI agent crew.
+* **Context-Aware Accuracy:** Eliminates LLM hallucinations by grounding responses in a Hybrid FAISS vector database containing internal documentation.
+* **Self-Correcting Quality Assurance:** Inbuilt critique loops ensure no response is delivered to a customer unless it meets strict formatting, factual, and tonal guidelines.
+* **Enterprise-Grade DevOps:** Built for zero-downtime deployments with fully automated CI/CD pipelines, containerization, and safe rollback mechanisms.
 
-Enterprise DevOps: Fully containerized with Docker, featuring a robust CI/CD pipeline via GitHub Actions with automated validation and rollback strategies.
+## 📸 System Interface
 
-📸 System Previews
-Frontend Interface
-The Streamlit-based chat interface where users interact with the support system.
- (Replace this path with your actual image file)
+### Customer Chat Portal (Frontend)
+*Streamlit-based interactive UI for seamless customer query submission.*
+> **[Insert your frontend image here: `![Frontend Interface](docs/frontend.png)`]**
 
-Backend Architecture & Logs
-The FastAPI backend processing agentic workflows and pipeline logs.
- (Replace this path with your actual image file)
+### Agent Orchestration & Logs (Backend)
+*FastAPI server handling asynchronous agent routing and pipeline execution.*
+> **[Insert your backend image here: `![Backend Logs](docs/backend.png)`]**
 
-🧠 Multi-Agent Workflow
-The core logic of the system is driven by five specialized agents working in sequence:
+---
 
-Query Understanding Agent: Parses the initial customer ticket to identify the core issue and extract key entities.
+## 🧠 Multi-Agent Workflow (CrewAI)
+The system moves beyond simple prompt engineering by orchestrating five specialized agents that collaborate to solve complex tickets:
 
-Sentiment Analysis Agent: Evaluates the emotional tone of the user to adjust the empathy and urgency of the final response.
+1. **Query Understanding Agent:** Ingests the ticket, extracts core entities, and categorizes the issue.
+2. **Sentiment Analysis Agent:** Evaluates customer frustration levels to dictate the empathy and urgency parameters of the response.
+3. **Knowledge Retrieval Agent (RAG):** Executes hybrid semantic searches against the FAISS database to pull relevant policy docs and prior solutions.
+4. **Resolution Agent:** Synthesizes the retrieved context and drafts a highly specific, actionable reply.
+5. **Quality Assurance Agent:** Acts as the final firewall. Critiques the draft, forcing regeneration if the response is inaccurate or violates brand tone.
 
-RAG Retrieval Agent: Queries the Hybrid FAISS knowledge base to pull relevant internal documentation and historical solutions.
+---
 
-Escalation Resolution Agent: Synthesizes the retrieved context and drafts a comprehensive, accurate response.
+## 🛠️ Technology Stack
+* **AI & Orchestration:** CrewAI, LangChain, Large Language Models
+* **Knowledge Retrieval:** FAISS (Hybrid Search), Embedding Models
+* **Backend API:** FastAPI, Uvicorn
+* **Frontend UI:** Streamlit
+* **Infrastructure & Deployment:** Docker, Docker Compose, GitHub Actions
 
-Quality Assurance Agent: Critiques the draft against support guidelines, ensuring formatting, tone, and factual accuracy before final delivery.
+---
 
-🛠️ Tech Stack
-Frameworks: CrewAI, LangChain
+## 🚀 DevOps & CI/CD Architecture
+This project emphasizes robust operational practices to ensure high availability:
+* **Automated Testing:** GitHub Actions automatically triggers unit and integration tests upon every pull request to the `main` branch.
+* **Containerization:** The frontend and backend are decoupled and containerized using Docker, ensuring environmental consistency across dev, staging, and production.
+* **Automated Rollbacks:** The CI/CD pipeline includes health-check validations post-deployment. If the newly deployed container fails to return a healthy status code, the pipeline automatically reverts to the previous stable image, preventing customer-facing downtime.
 
-Backend: FastAPI, Python 3.10+
+---
 
-Frontend: Streamlit
+## 💻 Local Setup & Installation
 
-Vector Database: FAISS (Hybrid Search)
+### Prerequisites
+* Docker Desktop installed and running.
+* An active API Key for your LLM provider.
 
-DevOps: Docker, GitHub Actions
-
-⚙️ Local Setup & Installation
-Prerequisites
-Docker & Docker Compose installed on your machine.
-
-API keys for your configured LLM provider.
-
-Steps
-Clone the repository:
-
-Bash
-git clone https://github.com/yourusername/enterprise-support-agent.git
-cd enterprise-support-agent
-Configure Environment Variables:
-Create a .env file in the root directory and add your credentials:
-
-Code snippet
-GEMINI_API_KEY=your_api_key_here
-Build and Run with Docker:
-
-Bash
-docker-compose up --build
-Access the Application:
-
-Frontend UI: http://localhost:8501
-
-FastAPI Docs (Swagger): http://localhost:8000/docs
-
-👨‍💻 Author
-Shreesanyog Rath
+### Quick Start
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/yourusername/enterprise-support-agent.git](https://github.com/yourusername/enterprise-support-agent.git)
+   cd enterprise-support-agent
